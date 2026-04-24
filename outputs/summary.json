@@ -2,201 +2,41 @@
   "classification_metrics": [
     {
       "model": "logistic_regression",
-      "accuracy": 0.9997673967823222,
-      "precision": 0.9997674057993488,
-      "recall": 0.9997674057993488,
-      "f1": 0.9997674057993488,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__solver": "lbfgs",
-        "model__C": 5.0
-      }
-    },
-    {
-      "model": "svm_rbf",
-      "accuracy": 0.9980616398526846,
-      "precision": 0.9972136222910216,
-      "recall": 0.9989145603969608,
-      "f1": 0.9980633666434271,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__gamma": 0.01,
-        "model__C": 2.0
-      }
-    },
-    {
-      "model": "knn",
-      "accuracy": 0.9958906764876914,
-      "precision": 0.9955066625348621,
-      "recall": 0.9962784927895798,
-      "f1": 0.995892428117492,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__weights": "distance",
-        "model__n_neighbors": 15
-      }
-    },
-    {
-      "model": "decision_tree",
-      "accuracy": 0.9999612327970537,
-      "precision": 1.0,
-      "recall": 0.999922468599783,
-      "f1": 0.9999612327970537,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__min_samples_split": 10,
-        "model__max_depth": null
-      }
+      "accuracy": 0.99775,
+      "precision": 0.9980119284294234,
+      "recall": 0.9975161450571287,
+      "f1": 0.9977639751552795
     },
     {
       "model": "random_forest",
-      "accuracy": 0.9999612327970537,
+      "accuracy": 0.99975,
       "precision": 1.0,
-      "recall": 0.999922468599783,
-      "f1": 0.9999612327970537,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__min_samples_split": 2,
-        "model__min_samples_leaf": 5,
-        "model__max_depth": null
-      }
+      "recall": 0.9995032290114257,
+      "f1": 0.999751552795031
     }
   ],
   "regression_metrics": [
     {
       "model": "linear_regression",
-      "mae": 472.0591724661838,
-      "rmse": 2030.863302864619,
-      "r2": 0.997929919541473,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {}
+      "mae": 1209.9038471057838,
+      "rmse": 3613.870904657267,
+      "r2": 0.9933290482171041
     },
     {
-      "model": "svr_rbf",
-      "mae": 27608.938506818748,
-      "rmse": 39492.69814534824,
-      "r2": 0.21718443360456874,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__epsilon": 0.2,
-        "model__C": 3.0
-      }
-    },
-    {
-      "model": "knn_regressor",
-      "mae": 648.2288492431719,
-      "rmse": 1718.8722291573554,
-      "r2": 0.998517096017695,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__weights": "distance",
-        "model__n_neighbors": 5
-      }
-    },
-    {
-      "model": "decision_tree_regressor",
-      "mae": 19.123694569881135,
-      "rmse": 516.9255004266037,
-      "r2": 0.999865883640834,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__min_samples_split": 20,
-        "model__max_depth": 20
-      }
-    },
-    {
-      "model": "random_forest_regressor",
-      "mae": 5.048334081183635,
-      "rmse": 123.12939420015626,
-      "r2": 0.9999923906190475,
-      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
-      "best_params": {
-        "model__min_samples_split": 2,
-        "model__min_samples_leaf": 5,
-        "model__max_depth": null
-      }
+      "model": "random_forest",
+      "mae": 31.53745499615465,
+      "rmse": 483.11281033257444,
+      "r2": 0.9998807826018177
     }
   ],
-  "best_classification_model": "decision_tree",
-  "best_regression_model": "random_forest_regressor",
   "dml_summary": {
-    "treatment": "Marketing Spend",
-    "outcome": "Profit",
-    "ate": 0.16755009492341255,
-    "ate_interval": [
-      NaN,
-      NaN
-    ],
-    "model_name": "LinearDML",
-    "inference_note": "EconML could estimate the treatment effect, but the confidence interval is not reliable for this sample and feature set.",
-    "top_causal_features": [
-      {
-        "feature": "Category_Ethnic Dress",
-        "importance": 9.48081134984184
-      },
-      {
-        "feature": "Sales Channel_Non-Amazon",
-        "importance": 1.059372664423407
-      },
-      {
-        "feature": "Category_Bottom",
-        "importance": 1.0100312391294228
-      },
-      {
-        "feature": "Category_Saree",
-        "importance": 0.7997096810054217
-      },
-      {
-        "feature": "Courier Status_Unshipped",
-        "importance": 0.5054824798252183
-      },
-      {
-        "feature": "Courier Status_Shipped",
-        "importance": 0.334909235192973
-      },
-      {
-        "feature": "Category_Set",
-        "importance": 0.33092350008878935
-      },
-      {
-        "feature": "Color",
-        "importance": 0.2909911770607235
-      },
-      {
-        "feature": "Employbl Company ID",
-        "importance": 0.2905880976431531
-      },
-      {
-        "feature": "Size",
-        "importance": 0.2700359300978117
-      },
-      {
-        "feature": "Qty",
-        "importance": 0.26871448917454244
-      },
-      {
-        "feature": "Category_kurta",
-        "importance": 0.19031361827523408
-      },
-      {
-        "feature": "Category_Western Dress",
-        "importance": 0.14160904676238112
-      },
-      {
-        "feature": "B2B",
-        "importance": 0.09108398075446279
-      },
-      {
-        "feature": "Company_Fulfilment_Vendors_Merchant",
-        "importance": 0.07964891358527909
-      }
-    ]
+    "ate": 1.2813773494111544,
+    "model": "LinearDML"
   },
   "business_insights": [
-    "The strongest predictive driver of Profit is 'num__Employbl Company ID', indicating this variable deserves close monitoring in allocation decisions.",
-    "The estimated average causal effect of 'Marketing Spend' on 'Profit' is 0.1676. Confidence intervals were not reported because inference was unstable for this run.",
-    "'Category_Ethnic Dress' appears to moderate the treatment effect most strongly, so segmenting resource allocation by this factor should improve ROI.",
-    "For forecasting, 'random_forest_regressor' delivered the strongest regression fit (R2=1.0000), making it the best candidate for operational deployment.",
+    "The estimated average causal effect of 'Marketing Spend' on 'Profit' is 1.2814. Confidence intervals were not reported because inference was unstable for this run.",
+    "'Sales Channel_Non-Amazon' appears to moderate the treatment effect most strongly, so segmenting resource allocation by this factor should improve ROI.",
+    "For forecasting, 'random_forest' delivered the strongest regression fit (R2=0.9999), making it the best candidate for operational deployment.",
     "Risk analysis: high-cardinality operational identifiers were excluded from causal and predictive training to reduce noise and leakage risk; monitor drift in spend, fulfillment status, and regional mix.",
     "Resource allocation recommendation: prioritize budget changes through 'Marketing Spend' only after validating response segments with the largest estimated uplift and acceptable uncertainty."
   ]

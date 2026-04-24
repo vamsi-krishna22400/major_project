@@ -44,7 +44,7 @@ elif default_path:
 if df is not None:
 
     st.subheader("Dataset Preview")
-    st.dataframe(df.head(10), width="stretch")
+    st.dataframe(df.head(10), use_container_width=True)
 
     columns = list(df.columns)
 
@@ -102,10 +102,10 @@ if df is not None:
             )
 
             st.subheader("Classification Metrics")
-            st.dataframe(outcome.classification_metrics, width="stretch")
+            st.dataframe(outcome.classification_metrics, use_container_width=True)
 
             st.subheader("Regression Metrics")
-            st.dataframe(outcome.regression_metrics, width="stretch")
+            st.dataframe(outcome.regression_metrics, use_container_width=True)
 
             st.subheader("Causal Summary")
             st.json(outcome.dml_summary)
@@ -132,7 +132,7 @@ if df is not None:
             for image_name in image_names:
                 image_path = Path("financial_dml_project") / "outputs" / image_name
                 if image_path.exists():
-                    st.image(str(image_path), caption=image_name, width="stretch")
+                    st.image(str(image_path), caption=image_name, use_container_width=True)
 
             progress.progress(100, text="Done ✅")
 
@@ -167,7 +167,7 @@ if df is not None:
             if dml_result.inference_note:
                 st.info(dml_result.inference_note)
 
-            st.dataframe(dml_result.feature_importance, width="stretch")
+            st.dataframe(dml_result.feature_importance, use_container_width=True)
 
         except Exception as exc:
             st.info(f"DML preview not available: {exc}")
