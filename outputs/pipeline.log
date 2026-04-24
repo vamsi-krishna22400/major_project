@@ -1,0 +1,13 @@
+2026-04-24 00:47:45 | INFO | financial_dml | Loading dataset from c:\Users\abhis\josh_su\Financial_companies_stratagies.csv
+2026-04-24 00:47:45 | INFO | financial_dml | Using sampled subset of 2000 rows for this run.
+2026-04-24 00:47:45 | INFO | financial_dml | Prepared dataset with 2000 rows and 40 columns; treatment=Marketing Spend; outcome=Profit
+2026-04-24 00:48:14 | INFO | financial_dml | Pipeline completed successfully.
+2026-04-24 00:52:14 | INFO | financial_dml | Loading dataset from c:\Users\abhis\josh_su\Financial_companies_stratagies.csv
+2026-04-24 00:52:16 | INFO | financial_dml | Prepared dataset with 128975 rows and 40 columns; treatment=Marketing Spend; outcome=Profit
+2026-04-24 01:06:19 | INFO | financial_dml | Loading dataset from c:\Users\abhis\josh_su\Financial_companies_stratagies.csv
+2026-04-24 01:06:21 | INFO | financial_dml | Prepared dataset with 128975 rows and 40 columns; treatment=Marketing Spend; outcome=Profit
+2026-04-24 01:42:28 | INFO | financial_dml | Loading dataset from c:\Users\abhis\josh_su\Financial_companies_stratagies.csv
+2026-04-24 01:42:31 | INFO | financial_dml | Prepared dataset with 128975 rows and 40 columns; treatment=Marketing Spend; outcome=Profit
+2026-04-24 01:56:26 | INFO | financial_dml | Pipeline completed successfully.
+2026-04-24 02:06:07 | INFO | financial_dml | Loading dataset from c:\Users\abhis\josh_su\Financial_companies_stratagies.csv
+2026-04-24 02:06:10 | INFO | financial_dml | Prepared dataset with 128975 rows and 40 columns; treatment=Marketing Spend; outcome=Profit

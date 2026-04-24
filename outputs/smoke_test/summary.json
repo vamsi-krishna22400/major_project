@@ -1,0 +1,202 @@
+{
+  "classification_metrics": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.995,
+      "precision": 0.995,
+      "recall": 0.995,
+      "f1": 0.995,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__solver": "liblinear",
+        "model__C": 5.0
+      }
+    },
+    {
+      "model": "svm_rbf",
+      "accuracy": 0.9925,
+      "precision": 0.9949748743718593,
+      "recall": 0.99,
+      "f1": 0.9924812030075187,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__gamma": 0.01,
+        "model__C": 2.0
+      }
+    },
+    {
+      "model": "knn",
+      "accuracy": 0.9575,
+      "precision": 0.9552238805970149,
+      "recall": 0.96,
+      "f1": 0.9576059850374065,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__weights": "distance",
+        "model__n_neighbors": 15
+      }
+    },
+    {
+      "model": "decision_tree",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__min_samples_split": 10,
+        "model__max_depth": null
+      }
+    },
+    {
+      "model": "random_forest",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__min_samples_split": 2,
+        "model__min_samples_leaf": 5,
+        "model__max_depth": null
+      }
+    }
+  ],
+  "regression_metrics": [
+    {
+      "model": "linear_regression",
+      "mae": 1340.343229837178,
+      "rmse": 1961.4951248244834,
+      "r2": 0.9971995664586546,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {}
+    },
+    {
+      "model": "svr_rbf",
+      "mae": 31360.52306879882,
+      "rmse": 36520.15057923936,
+      "r2": 0.029230945787011353,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__epsilon": 0.2,
+        "model__C": 3.0
+      }
+    },
+    {
+      "model": "knn_regressor",
+      "mae": 3248.3798999234264,
+      "rmse": 4664.523430771681,
+      "r2": 0.9841632754718841,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__weights": "distance",
+        "model__n_neighbors": 9
+      }
+    },
+    {
+      "model": "decision_tree_regressor",
+      "mae": 1422.7932749848014,
+      "rmse": 1708.7966086624392,
+      "r2": 0.9978746446557345,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__min_samples_split": 2,
+        "model__max_depth": 5
+      }
+    },
+    {
+      "model": "random_forest_regressor",
+      "mae": 139.67532631813899,
+      "rmse": 677.6172322159271,
+      "r2": 0.9996657898093132,
+      "high_cardinality_excluded": "Order ID, Style, SKU, ASIN, ship-city, ship-state",
+      "best_params": {
+        "model__min_samples_split": 2,
+        "model__min_samples_leaf": 1,
+        "model__max_depth": 8
+      }
+    }
+  ],
+  "best_classification_model": "decision_tree",
+  "best_regression_model": "random_forest_regressor",
+  "dml_summary": {
+    "treatment": "Marketing Spend",
+    "outcome": "Profit",
+    "ate": -0.34712553607563257,
+    "ate_interval": [
+      -1.0129009479049866,
+      0.31864987574103965
+    ],
+    "model_name": "LinearDML",
+    "top_causal_features": [
+      {
+        "feature": "Category_Saree",
+        "importance": 7.068086891104159
+      },
+      {
+        "feature": "Color",
+        "importance": 3.749924261395729
+      },
+      {
+        "feature": "Employbl Company ID",
+        "importance": 3.745161527559917
+      },
+      {
+        "feature": "Courier Status_Shipped",
+        "importance": 3.1539947478843606
+      },
+      {
+        "feature": "Category_Top",
+        "importance": 2.5314515792637513
+      },
+      {
+        "feature": "Category_Set",
+        "importance": 2.5192224119154574
+      },
+      {
+        "feature": "Category_Ethnic Dress",
+        "importance": 2.501844108944453
+      },
+      {
+        "feature": "Sales Channel_Non-Amazon",
+        "importance": 2.3130061689023385
+      },
+      {
+        "feature": "Longitude",
+        "importance": 2.242797069619119
+      },
+      {
+        "feature": "Category_kurta",
+        "importance": 1.8657666953651961
+      },
+      {
+        "feature": "Qty",
+        "importance": 1.7589252145338055
+      },
+      {
+        "feature": "Courier Status_Unshipped",
+        "importance": 1.3915139050357814
+      },
+      {
+        "feature": "ship-service-level_Standard",
+        "importance": 1.0285976846634364
+      },
+      {
+        "feature": "B2B",
+        "importance": 0.5842938031302036
+      },
+      {
+        "feature": "Category_Western Dress",
+        "importance": 0.5015549463976531
+      }
+    ]
+  },
+  "business_insights": [
+    "The strongest predictive driver of Profit is 'num__State', indicating this variable deserves close monitoring in allocation decisions.",
+    "The estimated average causal effect of 'Marketing Spend' on 'Profit' is -0.3471, with a 95% interval of [-1.0129, 0.3186].",
+    "'Category_Saree' appears to moderate the treatment effect most strongly, so segmenting resource allocation by this factor should improve ROI.",
+    "For forecasting, 'random_forest_regressor' delivered the strongest regression fit (R2=0.9997), making it the best candidate for operational deployment.",
+    "Risk analysis: high-cardinality operational identifiers were excluded from causal and predictive training to reduce noise and leakage risk; monitor drift in spend, fulfillment status, and regional mix.",
+    "Resource allocation recommendation: prioritize budget changes through 'Marketing Spend' only after validating response segments with the largest estimated uplift and acceptable uncertainty."
+  ]
+}

@@ -1,0 +1,6 @@
+model,mae,rmse,r2,high_cardinality_excluded,best_params
+linear_regression,472.0591724661838,2030.863302864619,0.997929919541473,"Order ID, Style, SKU, ASIN, ship-city, ship-state",{}
+svr_rbf,27608.938506818748,39492.69814534824,0.21718443360456874,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__epsilon': 0.2, 'model__C': 3.0}"
+knn_regressor,648.2288492431719,1718.8722291573554,0.998517096017695,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__weights': 'distance', 'model__n_neighbors': 5}"
+decision_tree_regressor,19.123694569881135,516.9255004266037,0.999865883640834,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__min_samples_split': 20, 'model__max_depth': 20}"
+random_forest_regressor,5.048334081183635,123.12939420015626,0.9999923906190475,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__min_samples_split': 2, 'model__min_samples_leaf': 5, 'model__max_depth': None}"

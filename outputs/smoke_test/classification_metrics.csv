@@ -1,0 +1,6 @@
+model,accuracy,precision,recall,f1,high_cardinality_excluded,best_params
+logistic_regression,0.995,0.995,0.995,0.995,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__solver': 'liblinear', 'model__C': 5.0}"
+svm_rbf,0.9925,0.9949748743718593,0.99,0.9924812030075187,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__gamma': 0.01, 'model__C': 2.0}"
+knn,0.9575,0.9552238805970149,0.96,0.9576059850374065,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__weights': 'distance', 'model__n_neighbors': 15}"
+decision_tree,1.0,1.0,1.0,1.0,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__min_samples_split': 10, 'model__max_depth': None}"
+random_forest,1.0,1.0,1.0,1.0,"Order ID, Style, SKU, ASIN, ship-city, ship-state","{'model__min_samples_split': 2, 'model__min_samples_leaf': 5, 'model__max_depth': None}"
